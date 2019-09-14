@@ -1,0 +1,8 @@
+# Ignoring .idea directory
+/.idea
+
+# Ignoring .vs directory
+/.vs
+
+# dependencies
+/node_modules
