@@ -1,0 +1,58 @@
+/*MAIN*/
+
+body {
+    background-color: #f1f1f1;
+    font-family: "comic sans ms"
+}
+
+.game {
+    min-height: 700px;
+    min-width: 800px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #6A9113;
+    background: -webkit-linear-gradient(to right, #141517, #6A9113);
+    background: linear-gradient(to right, #141517, #6A9113);
+}
+
+/*CONTENT*/
+
+/*Main*/
+.content {
+    text-align: center;
+}
+
+/*Header*/
+.content header h1 {
+    color: white;
+    font-size: 85px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/*FORM*/
+
+.label-text {
+    font-size: 30px;
+    color: white
+}
+.my-input {
+    margin: 0 auto;
+    max-width: 250px;
+}
+
+.registr {
+    color: white;
+}
+
+.registr:hover {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+main-btn {
+    font-size: 20px !important;
+}
