@@ -2,55 +2,87 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="img/icon/sony_playstation_2.ico">
-    <title>Starter Template · Bootstrap</title>
-    <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/starter-template/">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link href="/css/stylesheet.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="img/icon/sony_playstation_2.ico">
+  <title>Starter Template · Bootstrap</title>
+  <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/starter-template/">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link href="/css/stylesheet.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <main>
-        <div class="container game">
-            <div class="row">
-                <div class="col-md-3"></div>
-                <div class="col-md-6 content">
-                    <header>
-                        <h1>Memory Game</h1>
-                    </header>
-                    <div class="myForm">
-                        <form>
-                            <div class="form-group">
-                                <label for="login" class="label-text">Login</label>
-                                <input type="text" class="form-control my-input" id="login">
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1" class="label-text">Password</label>
-                                <input type="password" class="form-control my-input" id="exampleInputPassword1">
-                            </div>
-                            <div class="form-group">
-                                <a href="" class="registr">You don't have an account yet?</a>
-                            </div>
-                            <button type="submit" class="btn btn-warning main-btn">Log in</button>
-                        </form>
-                    </div>
-                </div>
-                <div class="col-md-3"></div>
+<main>
+  <div class="container game">
+    <div class="row">
+      <div class="col-3"></div>
+      <div class="col-6 content">
+        <header>
+          <h1>Memory Game</h1>
+        </header>
+        <div class="myForm">
+          <form>
+            <div class="form-group">
+              <label for="login" class="label-text">Login</label>
+              <input type="text" class="form-control my-input" id="login">
             </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1" class="label-text">Password</label>
+              <input type="password" class="form-control my-input" id="exampleInputPassword1">
+            </div>
+            <div class="form-group">
+              <a href="" class="registr" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">You don't
+                have an account yet?</a>
+              <!--                              <a type="button" class="btn btn-primary registr" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">You don't have an account yet?</a>-->
+            </div>
+            <button type="submit" class="btn btn-warning main-btn">Log in</button>
+          </form>
         </div>
-    </main>
+      </div>
+      <div class="col-3"></div>
+    </div>
+  </div>
+</main>
 
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Register form</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Login:</label>
+            <input type="text" class="form-control" id="recipient-name">
+          </div>
+          <div class="form-group">
+            <label for="recipient-pass" class="col-form-label">Password:</label>
+            <input type="password" class="form-control" id="recipient-pass">
+          </div>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="js/main.js"></script>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Register</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
 </body>
 
 </html>
