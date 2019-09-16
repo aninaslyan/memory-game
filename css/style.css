@@ -2,7 +2,7 @@
 
 body {
     background-color: #ffe0b9;
-    font-family: "comic sans ms"
+    font-family: "comic sans ms", serif;
 }
 
 .game {
@@ -55,13 +55,13 @@ body {
     outline: none !important;
 }
 
-.registr {
+.register {
     font-size: 18px;
     color: white !important;
     transition: all 0.3s ease 0s;
 }
 
-.registr:hover {
+.register:hover {
     color: white !important;
     font-weight: 700;
     text-decoration: none;
@@ -72,11 +72,10 @@ body {
     border: none;
     background: #ff5b05;
     color: #ffffff !important;
-  font-size:22px;
+    font-size:22px;
     font-weight: 100;
     padding: 5px 15px;
   /*text-transform: uppercase;*/
-
     border-radius: 6px;
     display: inline-block;
     transition: all 0.3s ease 0s;
@@ -87,7 +86,7 @@ body {
     font-weight: 700 !important;
     letter-spacing: 3px;
     background-color: #ffcb1a;
-    -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
-    -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+    -webkit-box-shadow: 0 5px 40px -10px rgba(0, 0, 0, 0.57);
+    -moz-box-shadow: 0 5px 40px -10px rgba(0, 0, 0, 0.57);
     transition: all 0.3s ease 0s;
 }
