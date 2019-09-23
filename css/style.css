@@ -13,7 +13,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: linear-gradient(to right, #bfa000, #799f0c);
+    background: linear-gradient(#6fb98f,#2c7873);
 }
 
 /*CONTENT*/
@@ -24,16 +24,14 @@ body {
 }
 
 /*Header*/
-.content header h1 {
-    color: white;
+.container header h1 {
+    color: #004445;
     font-weight: bolder;
     font-size: 85px;
     text-align: center;
     margin-bottom: 50px;
     text-transform: uppercase;
-    background: linear-gradient(to right, #ff0015 0%, #ff7726 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+
 }
 
 /*FORM*/
@@ -47,46 +45,45 @@ body {
     margin: 0 auto;
     max-width: 250px;
     border-radius: 10px;
-    border: 3px solid #ffcb1a;
+    border: 3px solid #6fb98f;
 }
 
 .my-input:focus {
-    border: 4px solid #46aa2d;;
-    outline: none !important;
+    border: 3.5px solid #205c4d63;
+    box-shadow: none;
 }
-
 .register {
+    margin-top: 20px;
+}
+.register-link {
     font-size: 18px;
     color: white !important;
+    text-decoration: underline;
     transition: all 0.3s ease 0s;
 }
 
-.register:hover {
+.register-link:hover {
     color: white !important;
-    font-weight: 700;
-    text-decoration: none;
+    /* cursor: pointer !important; */
+    /* font-weight: 600; */
+    letter-spacing: 1px;
     transition: all 0.3s ease 0s;
 }
 
 .main-btn {
     border: none;
-    background: #ff5b05;
+    background-color: #00494bd5;
     color: #ffffff !important;
     font-size:22px;
-    font-weight: 100;
-    padding: 5px 15px;
-  /*text-transform: uppercase;*/
+    font-weight: 700 !important;
     border-radius: 6px;
     display: inline-block;
     transition: all 0.3s ease 0s;
 }
 
 .main-btn:hover {
-    color: #404040 !important;
-    font-weight: 700 !important;
-    letter-spacing: 3px;
-    background-color: #ffcb1a;
-    -webkit-box-shadow: 0 5px 40px -10px rgba(0, 0, 0, 0.57);
-    -moz-box-shadow: 0 5px 40px -10px rgba(0, 0, 0, 0.57);
+    background-color: #002d2e;
+    color: #ffffff !important;
+    letter-spacing: 1.5px;
     transition: all 0.3s ease 0s;
 }
