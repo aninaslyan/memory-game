@@ -1,4 +1,5 @@
 // FULL SCREEN BTN
+
 function toggleFullscreen(elem) {
   elem = elem || document.documentElement;
   if (!document.fullscreenElement && !document.mozFullScreenElement &&
