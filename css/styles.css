@@ -1,15 +1,15 @@
 /*MAIN*/
 
 body {
-    background-color: #ffe0b9;
+    background-color: #e0f6ea;
     font-family: "comic sans ms", serif;
 }
 
 .game {
-    padding-top: 50px;
+    padding-top: 20px;
     min-height: 700px;
     min-width: 800px;
-    position: fixed;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -31,7 +31,8 @@ body {
     text-align: center;
     margin-bottom: 50px;
     text-transform: uppercase;
-
+    user-select: none;
+    cursor: pointer
 }
 
 /*FORM*/
@@ -48,13 +49,15 @@ body {
     border: 3px solid #6fb98f;
 }
 
-.my-input:focus {
+.my-input:focus, .reg-input:focus {
     border: 3.5px solid #205c4d63;
     box-shadow: none;
 }
+
 .register {
     margin-top: 20px;
 }
+
 .register-link {
     font-size: 18px;
     color: white !important;
@@ -64,8 +67,6 @@ body {
 
 .register-link:hover {
     color: white !important;
-    /* cursor: pointer !important; */
-    /* font-weight: 600; */
     letter-spacing: 1px;
     transition: all 0.3s ease 0s;
 }
@@ -86,4 +87,24 @@ body {
     color: #ffffff !important;
     letter-spacing: 1.5px;
     transition: all 0.3s ease 0s;
+}
+
+/* REGISTER  */
+
+.reg-btn {
+    background-color: #00494bd5;
+    border: none
+}
+
+.reg-btn:hover {
+    background-color: #002d2e;
+}
+
+/* LOADING */
+
+.txt .loading {
+    font-size: 48px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-align: center;
 }

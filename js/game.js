@@ -30,23 +30,20 @@ document.getElementById('btnFullscreen').addEventListener('click', function () {
   toggleFullscreen();
 });
 
-$(document).ready(function () {
-  $('#btnFullscreen').on("click", function () {
-    if ($(this).hasClass('fas fa-expand-arrows-alt')) {
-      $(this).removeClass('fas fa-expand-arrows-alt');
-      $(this).addClass('fas fa-compress-arrows-alt');
-    } else {
-      $(this).removeClass('fas fa-compress-arrows-alt');
-      $(this).addClass('fas fa-expand-arrows-alt');
-    }
-  });
+$('#btnFullscreen').on("click", function () {
+  if ($(this).hasClass('fas fa-expand-arrows-alt')) {
+    $(this).removeClass('fas fa-expand-arrows-alt');
+    $(this).addClass('fas fa-compress-arrows-alt');
+  } else {
+    $(this).removeClass('fas fa-compress-arrows-alt');
+    $(this).addClass('fas fa-expand-arrows-alt');
+  }
 });
-
 
 // AUDIO BUTTAN
 
 let track = document.querySelector("#track");
-document.getElementById("musicBtn").onclick = function() {
+document.getElementById("musicBtn").onclick = function () {
   if (!track.paused && !track.ended) {
     track.pause();
   } else {
