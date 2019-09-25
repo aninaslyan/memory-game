@@ -1,6 +1,7 @@
 /* MAIN */
 
 body {
+  padding: 20px;
   background-color: #e0f6ea;
   font-family: "comic sans ms", serif;
 }
@@ -111,19 +112,21 @@ body {
 
 /* Icons */
 
-a[id = "btnFullscreen"] {
-  position: absolute;
-  color: rgba(250, 251, 255, 0.5) !important;
-  text-align: right;
-  font-size: 40px;
-}
+/*a[id = "btnFullscreen"] {*/
+/*  position: absolute;*/
+/*  color: rgba(250, 251, 255, 0.5) !important;*/
+/*  text-align: right;*/
+/*  font-size: 40px;*/
+/*}*/
 
-a[id = "btnFullscreen"]:hover {
-  color: rgb(255, 255, 255) !important;
-  cursor: pointer;
-}
+/*a[id = "btnFullscreen"]:hover {*/
+/*  color: rgb(255, 255, 255) !important;*/
+/*  cursor: pointer;*/
+/*}*/
 
-a[id = "btnFullscreen"] {
-  right: 30px;
-  top: 10px;
-}
+/*a[id = "btnFullscreen"] {*/
+/*  right: 30px;*/
+/*  top: 10px;*/
+/*}*/
+
+
