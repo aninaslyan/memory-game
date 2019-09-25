@@ -5,17 +5,18 @@
 a[id = "btnFullscreen"],
 a[id = "musicBtn"],
 a[id = "soundBtn"],
-a[id = "info"] {
+a[id = "infoBtn"] {
   position: absolute;
   color: rgba(250, 251, 255, 0.5) !important;
   text-align: right;
   font-size: 40px;
 }
 
+a[id="settings"]:hover,
 a[id = "btnFullscreen"]:hover,
 a[id = "musicBtn"]:hover,
 a[id = "soundBtn"]:hover,
-a[id = "info"]:hover {
+a[id = "infoBtn"]:hover {
   color: rgb(255, 255, 255) !important;
   cursor: pointer;
 }
@@ -35,7 +36,11 @@ a[id = "soundBtn"] {
   top: 130px;
 }
 
-a[id = "info"] {
+a[id = "infoBtn"] {
   right: 30px;
   top: 190px;
+}
+
+#infoBtn:hover {
+  text-decoration: none;
 }
