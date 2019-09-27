@@ -1,5 +1,4 @@
 // FULL SCREEN BTN
-
 function toggleFullscreen(elem) {
   elem = elem || document.documentElement;
   if (!document.fullscreenElement && !document.mozFullScreenElement &&
@@ -40,7 +39,7 @@ $('#btnFullscreen').on("click", function () {
   }
 });
 
-// AUDIO BUTTON
+// AUDIO BUTTAN
 
 let track = document.querySelector("#track");
 document.getElementById("musicBtn").onclick = function () {
@@ -76,3 +75,6 @@ $(document).ready(function () {
     }
   });
 });
+
+
+
