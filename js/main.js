@@ -50,31 +50,34 @@ document.getElementById("musicBtn").onclick = function () {
   }
 };
 
-$(document).ready(function () {
-  $('#musicBtn').on("click", function () {
-    if ($(this).hasClass('fas fa-music')) {
-      $(this).removeClass('fas fa-music');
-      $(this).addClass('fa fa-pause');
-    } else {
-      $(this).removeClass('fa fa-pause');
-      $(this).addClass('fas fa-music');
-    }
-  });
+$('#musicBtn').on("click", function () {
+  if ($(this).hasClass('fas fa-music')) {
+    $(this).removeClass('fas fa-music');
+    $(this).addClass('fa fa-pause');
+  } else {
+    $(this).removeClass('fa fa-pause');
+    $(this).addClass('fas fa-music');
+  }
 });
 
 // SOUND BUTTON
 
-$(document).ready(function () {
-  $('#soundBtn').on("click", function () {
-    if ($(this).hasClass('fas fa-volume-up')) {
-      $(this).removeClass('fas fa-volume-up');
-      $(this).addClass('fas fa-volume-mute');
-    } else {
-      $(this).removeClass('fas fa-volume-mute');
-      $(this).addClass('fas fa-volume-up');
-    }
-  });
+$('#soundBtn').on("click", function () {
+  if ($(this).hasClass('fas fa-volume-up')) {
+    $(this).removeClass('fas fa-volume-up');
+    $(this).addClass('fas fa-volume-mute');
+  } else {
+    $(this).removeClass('fas fa-volume-mute');
+    $(this).addClass('fas fa-volume-up');
+  }
 });
 
+document.getElementById("disable-btn").onclick = function () {
+  let input = document.getElementById('disabled-input');
 
-
+  if(input.hasAttribute('disabled')) {
+    input.removeAttribute('disabled');
+  } else {
+    input.setAttribute('disabled', 'disabled');
+  }
+};
