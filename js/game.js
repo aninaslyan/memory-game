@@ -26,7 +26,7 @@ let imgArr = ['1.png', '2.png', '3.png', '4.png', '5.png', '6.png', '7.png', '8.
 imgArr = imgArr.concat(imgArr);
 shuffle(imgArr);
 
-console.log(imgArr)
+console.log(imgArr);
 let imgName = [];
 let divId = [];
 let click = 0;
@@ -44,7 +44,7 @@ for (let i = 0; i < imgArr.length; i++) {
     card.onclick = function () {
         let index = arrOfCards.indexOf(this);
         //        console.log(index);
-        this.style.backgroundImage = `url('img/png/${imgArr[index]}')`;
+        this.style.backgroundImage = `url('../img/png/${imgArr[index]}')`;
         this.style.pointerEvents = 'none';
 
         imgName.push(imgArr[index]);
@@ -65,13 +65,13 @@ for (let i = 0; i < imgArr.length; i++) {
                 imgName = [];
             } else {
                 setTimeout(function () {
-                    document.querySelector(`#${divId[0]}`).style.backgroundImage = "url('img/bg2.jpg')";
-                    document.querySelector(`#${divId[1]}`).style.backgroundImage = "url('img/bg2.jpg')";
+                    document.querySelector(`#${divId[0]}`).style.backgroundImage = "url('../img/bg2.jpg')";
+                    document.querySelector(`#${divId[1]}`).style.backgroundImage = "url('../img/bg2.jpg')";
                     divId = [];
                     imgName = [];
                     let cards = document.querySelectorAll('.card');
                     for (let card of cards) card.style.pointerEvents = 'auto';
-                    document.querySelector(".opened").style.pointerEvents = 'none';
+                    // document.querySelector(".opened").style.pointerEvents = 'none';
                 }, 500);
             }
         }

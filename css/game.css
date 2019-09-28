@@ -2,7 +2,6 @@
     padding-left: 50px;
 }
 
-
 .card {    
     background-image: url("../img/bg2.jpg");
     min-width: 125.016px;
@@ -18,5 +17,5 @@
 }
 
 img {
-    width: 10px !inportant;
+    width: 10px !important;
 }

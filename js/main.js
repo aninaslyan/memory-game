@@ -39,7 +39,7 @@ $('#btnFullscreen').on("click", function () {
   }
 });
 
-// AUDIO BUTTAN
+// AUDIO BUTTON
 
 let track = document.querySelector("#track");
 document.getElementById("musicBtn").onclick = function () {
