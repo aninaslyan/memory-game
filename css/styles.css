@@ -20,6 +20,14 @@ body {
     background: linear-gradient(#6fb98f, #2c7873);
 }
 
+/* Modal*/
+.no-border{
+  border:none;
+}
+
+.p-style {
+  margin-top: 8px;
+}
 /* CONTENT */
 
 /* Header */

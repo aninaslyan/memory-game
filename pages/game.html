@@ -40,19 +40,66 @@
               <a class="fas fa-cog" id="settings"></a>
               <ul id="dropMenu" style="height: 240px;">
                 <li><a class='fas fa-expand-arrows-alt' id="btnFullscreen"></a></li>
-                <li><a class='fas fa-music' id="musicBtn" onclick="playAudio()"></a></li>
+                <li><a class='fas fa-music' id="musicBtn"></a></li>
                 <li><a class='fas fa-volume-up' id="soundBtn"></a></li>
-                <li><a class='fas fa-info-circle' id="infoBtn"></a></li>
+                <li><a class='fas fa-info-circle' id="infoBtn" data-toggle="modal" data-target="#infoModal"></a></li>
               </ul>
             </li>
           </ul>
         </div>
-
       </div>
     </div>
   </div>
 </main>
 
+<!-- INFO MODAL -->
+<div class="modal fade" id="infoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header no-border">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-2 p-style">
+            <p>Username</p>
+          </div>
+          <div class="input-group mb-3 col-8">
+            <input type="text" class="form-control" placeholder="current username"
+                   aria-label="current username" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary" type="button">
+                <a class='fas fa-pencil-alt'></a>
+              </button>
+            </div>
+          </div>
+          <div class="col-2">
+            <button class="btn btn-primary reg-btn" type="button">Save</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-2 p-style">
+            <p>Place</p>
+          </div>
+          <div class="col-10 p-style">
+            <p><i>user place</i></p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-2 p-style">
+            <p>Score</p>
+          </div>
+          <div class="col-10 p-style">
+            <p><i>user score</i></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- AUDIO -->
 <audio id="track">
