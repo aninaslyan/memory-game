@@ -1,3 +1,14 @@
+// Modal button
+document.getElementById("disable-btn").onclick = function () {
+  let input = document.getElementById('disabled-input');
+
+  if(input.hasAttribute('disabled')) {
+    input.removeAttribute('disabled');
+  } else {
+    input.setAttribute('disabled', 'disabled');
+  }
+};
+
 // RANDOM ARRAY LAYOUT
 function shuffle(array) {
     var currentIndex = array.length,
