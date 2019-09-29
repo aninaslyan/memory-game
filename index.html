@@ -44,7 +44,8 @@
               <label for="exampleInputPassword1" class="label-text">Password</label>
               <input type="password" class="form-control my-input" id="exampleInputPassword1">
             </div>
-            <button type="submit" class="btn btn-warning main-btn">Log in</button>
+            <button id='loginBtn' type="button" class="btn btn-warning main-btn">Log in</button>
+            <label id="loginError"></label>
             <div class="form-group register">
               <a href="" class="register-link" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Don't
                 have an account yet?</a>
@@ -87,6 +88,7 @@
         </button>
       </div>
       <div class="modal-body">
+        <label id="registrationError"></label>
         <form>
           <div class="form-group">
             <label for="recipient-name" class="col-form-label">Username</label>
@@ -100,7 +102,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary reg-btn">Register</button>
+        <button id="registrationBtn" type="button" class="btn btn-primary reg-btn">Register</button>
       </div>
     </div>
   </div>
@@ -108,9 +110,9 @@
 
 
 <!-- AUDIO -->
-<audio id="track">
-  <source src="audio/The Pink Panther.mp3" type="audio/mp3">
-</audio>
+<audio autoplay loop  id="track">
+    <source src="audio/The Pink Panther.mp3">
+  </audio>
 
 <!--BOOTSTRAP SCRIPTS-->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
@@ -119,6 +121,33 @@
 
 <!--MY SCRIPTS-->
 <script src="js/main.js"></script>
+<script src="js/authentication.js"></script>
+
+
+<!--FIREBASE SCRIPTS-->
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-app.js"></script>
+  
+    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-analytics.js"></script>
+  
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-auth.js"></script>
+
+    <script>
+        // TODO: Replace the following with your app's Firebase project configuration
+        var firebaseConfig = {
+          apiKey: "AIzaSyBxE2DC_C-7Koh32oT4uxY-j8viItFK4-s",
+          authDomain: "memory-game-mic.firebaseapp.com",
+          databaseURL: "https://memory-game-mic.firebaseio.com",
+          projectId: "memory-game-mic",
+          storageBucket: "",
+          messagingSenderId: "1061403262711",
+          appId: "1:1061403262711:web:78cbd155b0d65584f7ddf2"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+      </script>
 
 </body>
 

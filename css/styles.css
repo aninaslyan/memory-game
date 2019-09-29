@@ -50,6 +50,11 @@ body {
     color: white
 }
 
+#registrationError, #loginError {
+    color: red;
+    display: block;
+}
+
 .my-input {
     margin: 0 auto;
     max-width: 250px;
