@@ -1,4 +1,4 @@
-// Click sound
+// CLICK SOUND
 let clickAudio = document.querySelector("#click");
 
 function clickSound() {
@@ -11,7 +11,14 @@ $('#loginBtn, #withoutAccount, #usernameInput, #btnFullscreen, #musicBtn, #sound
    clickSound();
 });
 
-$('#restartBtn').on('click', function() {
+// card click sound
+for (let i = 0; i < 23; i++) {
+   $(`#card${i}`).on('click', function () {
+      clickSound();
+   });
+}
+
+$('#restartBtn').on('click', function () {
    clickSound();
    setTimeout(() => {
       window.location.href = 'file:///home/reactive/Project/memory-game/pages/game.html'; //change after deployment
