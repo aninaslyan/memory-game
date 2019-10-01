@@ -50,7 +50,7 @@
                </ul>
             </div>
          </div>
-         <a class='fas fa-undo' id="restartBtn" href="game.html"></a>
+         <a class='fas fa-undo' id="restartBtn"></a>
       </div>
    </div>
 </main>
@@ -80,7 +80,7 @@
                   </div>
                </div>
                <div class="col-2">
-                  <button class="btn btn-primary reg-btn" type="button">Save</button>
+                  <button class="btn btn-primary reg-btn" type="button" id="saveButton">Save</button>
                </div>
             </div>
             <div class="row">
@@ -104,9 +104,14 @@
    </div>
 </div>
 
-<!-- AUDIO -->
-<audio id="track">
-   <source src="../audio/ThePinkPanther.mp3" type="audio/mp3">
+<!-- Music AUDIO -->
+<audio autoplay loop id="track">
+   <source src="../audio/ThePinkPanther.mp3" type="audio/mpeg">
+</audio>
+
+<!-- Click AUDIO -->
+<audio id="click">
+   <source src="../audio/click.wav">
 </audio>
 
 <!--BOOTSTRAP SCRIPTS-->

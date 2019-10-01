@@ -1,6 +1,6 @@
 $('#loginBtn').on('click', function () {
-   var username = $('#login').val();
-   var password = $('#exampleInputPassword1').val();
+   var username = $('#usernameInput').val();
+   var password = $('#passwordInput').val();
 
    firebase.auth().signInWithEmailAndPassword(username, password).then(function (user) {
       user = firebase.auth().currentUser;

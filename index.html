@@ -37,17 +37,18 @@
             <div class="myForm">
                <form>
                   <div class="form-group">
-                     <label for="login" class="label-text">Username</label>
-                     <input type="text" class="form-control my-input" id="login">
+                     <label for="usernameInput" class="label-text">Username</label>
+                     <input type="text" class="form-control my-input" id="usernameInput">
                   </div>
                   <div class="form-group">
-                     <label for="exampleInputPassword1" class="label-text">Password</label>
-                     <input type="password" class="form-control my-input" id="exampleInputPassword1">
+                     <label for="passwordInput" class="label-text">Password</label>
+                     <input type="password" class="form-control my-input" id="passwordInput">
                   </div>
                   <button id='loginBtn' type="button" class="btn btn-warning main-btn">Log in</button>
                   <label id="loginError"></label>
                   <div class="form-group register">
                      <a href="" class="register-link" data-toggle="modal" data-target="#exampleModal"
+                        id="withoutAccount"
                         data-whatever="@mdo">Don't
                         have an account yet?</a>
                   </div>
@@ -110,9 +111,14 @@
 </div>
 
 
-<!-- AUDIO -->
+<!-- Music AUDIO -->
 <audio autoplay loop id="track">
    <source src="audio/ThePinkPanther.mp3" type="audio/mpeg">
+</audio>
+
+<!-- Click AUDIO -->
+<audio id="click">
+   <source src="audio/click.wav">
 </audio>
 
 <!--BOOTSTRAP SCRIPTS-->

@@ -1,3 +1,23 @@
+// Click sound
+let clickAudio = document.querySelector("#click");
+
+function clickSound() {
+   if ($('ul li a').hasClass('fa-volume-up')) {
+      clickAudio.play();
+   }
+}
+
+$('#loginBtn, #withoutAccount, #usernameInput, #btnFullscreen, #musicBtn, #soundBtn, #passwordInput, #recipient-name, #recipient-pass, #registrationBtn, #restartBtn, #infoBtn, #saveButton, #disabled-input, #disable-btn').on('click', function () {
+   clickSound();
+});
+
+$('#restartBtn').on('click', function() {
+   clickSound();
+   setTimeout(() => {
+      window.location.href = 'file:///home/reactive/Project/memory-game/pages/game.html'; //change after deployment
+   }, 1000)
+});
+
 // FULL SCREEN BTN
 function toggleFullscreen(elem) {
    elem = elem || document.documentElement;
@@ -25,11 +45,9 @@ function toggleFullscreen(elem) {
    }
 }
 
-document.getElementById('btnFullscreen').addEventListener('click', function () {
-   toggleFullscreen();
-});
-
 $('#btnFullscreen').on("click", function () {
+   toggleFullscreen();
+
    if ($(this).hasClass('fas fa-expand-arrows-alt')) {
       $(this).removeClass('fas fa-expand-arrows-alt');
       $(this).addClass('fas fa-compress-arrows-alt');
@@ -42,15 +60,15 @@ $('#btnFullscreen').on("click", function () {
 // AUDIO BUTTON
 
 let track = document.querySelector("#track");
-document.getElementById("musicBtn").onclick = function () {
+
+$('#musicBtn').on("click", function () {
    if (!track.paused && !track.ended) {
       track.pause();
    } else {
       track.play();
+      track.currentTime = 0;
    }
-};
 
-$('#musicBtn').on("click", function () {
    if ($(this).hasClass('fas fa-music')) {
       $(this).removeClass('fas fa-music');
       $(this).addClass('fa fa-pause');
