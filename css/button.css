@@ -6,7 +6,8 @@ a[id="settings"],
 a[id="btnFullscreen"],
 a[id="musicBtn"],
 a[id="soundBtn"],
-a[id="infoBtn"] {
+a[id="infoBtn"],
+#restartBtn {
    position: absolute;
    color: rgba(250, 251, 255, 0.5) !important;
    text-align: right;
@@ -24,7 +25,8 @@ a[id="settings"]:hover,
 a[id="btnFullscreen"]:hover,
 a[id="musicBtn"]:hover,
 a[id="soundBtn"]:hover,
-a[id="infoBtn"]:hover {
+a[id="infoBtn"]:hover,
+#restartBtn:hover {
    color: rgb(255, 255, 255) !important;
    cursor: pointer;
 }
@@ -43,4 +45,10 @@ a[id="soundBtn"] {
 
 a[id = "infoBtn"] {
    top: 190px;
+}
+
+#restartBtn {
+   text-decoration: none;
+   right: 40px;
+   top: 520px;
 }
