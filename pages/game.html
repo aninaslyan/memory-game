@@ -105,7 +105,7 @@
 
 <!-- AUDIO -->
 <audio id="track">
-   <source src="../audio/The Pink Panther.mp3" type="audio/mp3">
+   <source src="../audio/ThePinkPanther.mp3" type="audio/mp3">
 </audio>
 
 <!--BOOTSTRAP SCRIPTS-->
@@ -116,6 +116,19 @@
 <!--MY SCRIPTS-->
 <script src="../js/main.js"></script>
 <script src="../js/game.js"></script>
+
+<script>
+   // Modal button
+   document.getElementById("disable-btn").onclick = function () {
+      let input = document.getElementById('disabled-input');
+
+      if (input.hasAttribute('disabled')) {
+         input.removeAttribute('disabled');
+      } else {
+         input.setAttribute('disabled', 'disabled');
+      }
+   };
+</script>
 
 </body>
 
