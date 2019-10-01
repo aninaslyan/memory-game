@@ -1,33 +1,22 @@
-// Modal button
-document.getElementById("disable-btn").onclick = function () {
-  let input = document.getElementById('disabled-input');
-
-  if(input.hasAttribute('disabled')) {
-    input.removeAttribute('disabled');
-  } else {
-    input.setAttribute('disabled', 'disabled');
-  }
-};
-
 // RANDOM ARRAY LAYOUT
 function shuffle(array) {
-    var currentIndex = array.length,
-        temporaryValue, randomIndex;
+   let currentIndex = array.length,
+      temporaryValue, randomIndex;
 
-    // While there remain elements to shuffle...
-    while (0 !== currentIndex) {
+   // While there remain elements to shuffle...
+   while (0 !== currentIndex) {
 
-        // Pick a remaining element...
-        randomIndex = Math.floor(Math.random() * currentIndex);
-        currentIndex -= 1;
+      // Pick a remaining element...
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex -= 1;
 
-        // And swap it with the current element.
-        temporaryValue = array[currentIndex];
-        array[currentIndex] = array[randomIndex];
-        array[randomIndex] = temporaryValue;
-    }
+      // And swap it with the current element.
+      temporaryValue = array[currentIndex];
+      array[currentIndex] = array[randomIndex];
+      array[randomIndex] = temporaryValue;
+   }
 
-    return array;
+   return array;
 }
 
 //let click = new Audio;
@@ -43,57 +32,57 @@ let divId = [];
 let click = 0;
 
 for (let i = 0; i < imgArr.length; i++) {
-    let card = document.createElement("div");
-    card.setAttribute('id', 'card' + i);
-    card.setAttribute('class', 'card');
+   let card = document.createElement("div");
+   card.setAttribute('id', 'card' + i);
+   card.setAttribute('class', 'card');
 
-    document.querySelector("#game").appendChild(card);
+   document.querySelector("#game").appendChild(card);
 
-    let arrOfCards = Array.from(document.getElementsByClassName('card'));
+   let arrOfCards = Array.from(document.getElementsByClassName('card'));
 
 
-    card.onclick = function () {
-        let index = arrOfCards.indexOf(this);
-        //        console.log(index);
-        this.style.backgroundImage = `url('../img/png/${imgArr[index]}')`;
-        this.style.pointerEvents = 'none';
+   card.onclick = function () {
+      let index = arrOfCards.indexOf(this);
 
-        imgName.push(imgArr[index]);
-        divId.push(this.getAttribute("id"));
+      this.style.backgroundImage = `url('../img/png/${imgArr[index]}')`;
+      this.style.pointerEvents = 'none';
 
-        console.log(index);
-        console.log("Img name", imgName);
-        console.log("Div ID", divId);
+      imgName.push(imgArr[index]);
+      divId.push(this.getAttribute("id"));
 
-        if (click % 2 !== 0) {
-            //            document.querySelector(".card").style.pointerEvents = 'none';
-            if (imgName[0] === imgName[1]) {
-                win();
-                document.querySelector(".card").style.pointerEvents = 'auto';
-                document.querySelector(`#${divId[0]}`).classList.add("opened");
-                document.querySelector(`#${divId[1]}`).classList.add("opened");
-                divId = [];
-                imgName = [];
-            } else {
-                setTimeout(function () {
-                    document.querySelector(`#${divId[0]}`).style.backgroundImage = "url('../img/bg2.jpg')";
-                    document.querySelector(`#${divId[1]}`).style.backgroundImage = "url('../img/bg2.jpg')";
-                    divId = [];
-                    imgName = [];
-                    let cards = document.querySelectorAll('.card');
-                    for (let card of cards) card.style.pointerEvents = 'auto';
-                    // document.querySelector(".opened").style.pointerEvents = 'none';
-                }, 500);
-            }
-        }
-        click++;
-                this.style.pointerEvents = 'none';
-    }
+      console.log(index);
+      console.log("Img name", imgName);
+      console.log("Div ID", divId);
+
+      if (click % 2 !== 0) {
+         // document.querySelector(".card").style.pointerEvents = 'none';
+         if (imgName[0] === imgName[1]) {
+            win();
+            document.querySelector(".card").style.pointerEvents = 'auto';
+            document.querySelector(`#${divId[0]}`).classList.add("opened");
+            document.querySelector(`#${divId[1]}`).classList.add("opened");
+            divId = [];
+            imgName = [];
+         } else {
+            setTimeout(function () {
+               document.querySelector(`#${divId[0]}`).style.backgroundImage = "url('../img/bg2.jpg')";
+               document.querySelector(`#${divId[1]}`).style.backgroundImage = "url('../img/bg2.jpg')";
+               divId = [];
+               imgName = [];
+               let cards = document.querySelectorAll('.card');
+               for (let card of cards) card.style.pointerEvents = 'auto';
+               // document.querySelector(".opened").style.pointerEvents = 'none';
+            }, 500);
+         }
+      }
+      click++;
+      this.style.pointerEvents = 'none';
+   }
 }
 
 
 function win() {
-    if (imgArr.length === divId.length) {
-        alert("Wiiiin");
-    }
+   if (imgArr.length === divId.length) {
+      alert("Wiiiin");
+   }
 }

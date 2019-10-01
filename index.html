@@ -2,117 +2,118 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <meta name="description" content="">
+   <meta name="author" content="">
 
-  <!--  FAVICON & TITLE-->
-  <link rel="icon" href="img/icon/sony_playstation.ico">
-  <title>Memory Game</title>
+   <!--  FAVICON & TITLE-->
+   <link rel="icon" href="img/icon/sony_playstation.ico">
+   <title>Memory Game</title>
 
-  <!--ICON LINKS-->
-  <link rel="stylesheet" href="img/icon/fontawesome/css/all.css">
-  <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/starter-template/">
+   <!--ICON LINKS-->
+   <link rel="stylesheet" href="img/icon/fontawesome/css/all.css">
+   <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/starter-template/">
 
-  <!--  BOOTSTRAP LINKS-->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+   <!--  BOOTSTRAP LINKS-->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
-  <!--  MY LINKS-->
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/dropdown.css">
-  <link rel="stylesheet" href="css/button.css">
+   <!--  MY LINKS-->
+   <link rel="stylesheet" href="css/styles.css">
+   <link rel="stylesheet" href="css/dropdown.css">
+   <link rel="stylesheet" href="css/button.css">
 </head>
 
 <body>
 <!-- WELCOME PAGE & LOG IN -->
 <main>
-  <div class="container game">
-    <div class="row">
-      <div class="col-3"></div>
-      <div class="col-6 content">
-        <header>
-          <h1>Memory Game</h1>
-        </header>
-        <div class="myForm">
-          <form>
-            <div class="form-group">
-              <label for="login" class="label-text">Username</label>
-              <input type="text" class="form-control my-input" id="login">
+   <div class="container game">
+      <div class="row">
+         <div class="col-3"></div>
+         <div class="col-6 content">
+            <header>
+               <h1>Memory Game</h1>
+            </header>
+            <div class="myForm">
+               <form>
+                  <div class="form-group">
+                     <label for="login" class="label-text">Username</label>
+                     <input type="text" class="form-control my-input" id="login">
+                  </div>
+                  <div class="form-group">
+                     <label for="exampleInputPassword1" class="label-text">Password</label>
+                     <input type="password" class="form-control my-input" id="exampleInputPassword1">
+                  </div>
+                  <button id='loginBtn' type="button" class="btn btn-warning main-btn">Log in</button>
+                  <label id="loginError"></label>
+                  <div class="form-group register">
+                     <a href="" class="register-link" data-toggle="modal" data-target="#exampleModal"
+                        data-whatever="@mdo">Don't
+                        have an account yet?</a>
+                  </div>
+               </form>
             </div>
-            <div class="form-group">
-              <label for="exampleInputPassword1" class="label-text">Password</label>
-              <input type="password" class="form-control my-input" id="exampleInputPassword1">
+         </div>
+         <div class="col-3">
+            <div class="row">
+               <div class="col-sm-6"></div>
+               <div class="col-sm-6">
+                  <div class="dropDown buttons">
+                     <ul class="menu">
+                        <li>
+                           <a class="fas fa-cog" id="settings" style="margin-left: 40px;"></a>
+                           <ul id="dropMenu" style="height: 180px;">
+                              <li><a class='fas fa-expand-arrows-alt' id="btnFullscreen"></a></li>
+                              <li><a class='fas fa-music' id="musicBtn"></a></li>
+                              <li><a class='fas fa-volume-up' id="soundBtn"></a></li>
+                           </ul>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
             </div>
-            <button id='loginBtn' type="button" class="btn btn-warning main-btn">Log in</button>
-            <label id="loginError"></label>
-            <div class="form-group register">
-              <a href="" class="register-link" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Don't
-                have an account yet?</a>
-            </div>
-          </form>
-        </div>
+         </div>
       </div>
-      <div class="col-3">
-        <div class="row">
-          <div class="col-sm-6"></div>
-          <div class="col-sm-6">
-            <div class="dropDown buttons">
-              <ul class="menu">
-                <li>
-                  <a class="fas fa-cog" id="settings" style="margin-left: 40px;"></a>
-                  <ul id="dropMenu" style="height: 180px;">
-                    <li><a class='fas fa-expand-arrows-alt' id="btnFullscreen"></a></li>
-                    <li><a class='fas fa-music' id="musicBtn"></a></li>
-                    <li><a class='fas fa-volume-up' id="soundBtn"></a></li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+   </div>
 </main>
 
 <!-- MODAL PAGE -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
      aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Register</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+   <div class="modal-dialog" role="document">
+      <div class="modal-content">
+         <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Register</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+               <span aria-hidden="true">&times;</span>
+            </button>
+         </div>
+         <div class="modal-body">
+            <label id="registrationError"></label>
+            <form>
+               <div class="form-group">
+                  <label for="recipient-name" class="col-form-label">Username</label>
+                  <input type="text" class="form-control reg-input" id="recipient-name">
+               </div>
+               <div class="form-group">
+                  <label for="recipient-pass" class="col-form-label">Password</label>
+                  <input type="password" class="form-control reg-input" id="recipient-pass">
+               </div>
+            </form>
+         </div>
+         <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button id="registrationBtn" type="button" class="btn btn-primary reg-btn">Register</button>
+         </div>
       </div>
-      <div class="modal-body">
-        <label id="registrationError"></label>
-        <form>
-          <div class="form-group">
-            <label for="recipient-name" class="col-form-label">Username</label>
-            <input type="text" class="form-control reg-input" id="recipient-name">
-          </div>
-          <div class="form-group">
-            <label for="recipient-pass" class="col-form-label">Password</label>
-            <input type="password" class="form-control reg-input" id="recipient-pass">
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button id="registrationBtn" type="button" class="btn btn-primary reg-btn">Register</button>
-      </div>
-    </div>
-  </div>
+   </div>
 </div>
 
 
 <!-- AUDIO -->
-<audio autoplay loop  id="track">
-    <source src="audio/The Pink Panther.mp3">
-  </audio>
+<audio autoplay loop id="track">
+   <source src="audio/The Pink Panther.mp3">
+</audio>
 
 <!--BOOTSTRAP SCRIPTS-->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
@@ -125,29 +126,29 @@
 
 
 <!--FIREBASE SCRIPTS-->
-    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-app.js"></script>
-  
-    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
-    <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-analytics.js"></script>
-  
-    <!-- Add Firebase products that you want to use -->
-    <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-auth.js"></script>
+<!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-app.js"></script>
 
-    <script>
-        // TODO: Replace the following with your app's Firebase project configuration
-        var firebaseConfig = {
-          apiKey: "AIzaSyBxE2DC_C-7Koh32oT4uxY-j8viItFK4-s",
-          authDomain: "memory-game-mic.firebaseapp.com",
-          databaseURL: "https://memory-game-mic.firebaseio.com",
-          projectId: "memory-game-mic",
-          storageBucket: "",
-          messagingSenderId: "1061403262711",
-          appId: "1:1061403262711:web:78cbd155b0d65584f7ddf2"
-        };
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-      </script>
+<!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+<script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-analytics.js"></script>
+
+<!-- Add Firebase products that you want to use -->
+<script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-auth.js"></script>
+
+<script>
+   // TODO: Replace the following with your app's Firebase project configuration
+   var firebaseConfig = {
+      apiKey: "AIzaSyBxE2DC_C-7Koh32oT4uxY-j8viItFK4-s",
+      authDomain: "memory-game-mic.firebaseapp.com",
+      databaseURL: "https://memory-game-mic.firebaseio.com",
+      projectId: "memory-game-mic",
+      storageBucket: "",
+      messagingSenderId: "1061403262711",
+      appId: "1:1061403262711:web:78cbd155b0d65584f7ddf2"
+   };
+   // Initialize Firebase
+   firebase.initializeApp(firebaseConfig);
+</script>
 
 </body>
 

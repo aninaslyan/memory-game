@@ -2,109 +2,110 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <meta name="description" content="">
+   <meta name="author" content="">
 
-  <!--  FAVICON & TITLE -->
-  <link rel="icon" href="../img/icon/sony_playstation.ico">
-  <title>Memory Game</title>
+   <!--  FAVICON & TITLE -->
+   <link rel="icon" href="../img/icon/sony_playstation.ico">
+   <title>Memory Game</title>
 
-  <!-- ICONS -->
-  <link rel="stylesheet" href="../img/icon/fontawesome/css/all.css">
-  <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/starter-template/">
+   <!-- ICONS -->
+   <link rel="stylesheet" href="../img/icon/fontawesome/css/all.css">
+   <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/starter-template/">
 
-  <!--  BOOTSTRAP -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+   <!--  BOOTSTRAP -->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
-  <!--  STYLES -->
-  <link rel="stylesheet" href="../css/styles.css">
-  <link rel="stylesheet" href="../css/dropdown.css">
-  <link rel="stylesheet" href="../css/game.css">
-  <link rel="stylesheet" href="../css/button.css">
+   <!--  STYLES -->
+   <link rel="stylesheet" href="../css/styles.css">
+   <link rel="stylesheet" href="../css/dropdown.css">
+   <link rel="stylesheet" href="../css/game.css">
+   <link rel="stylesheet" href="../css/button.css">
 
 </head>
 
 <body>
 <!-- WELCOME PAGE & LOG IN -->
 <main>
-  <div class="container game">
-    <div class="row">
-      <div class="col-11">
-        <div id="game"></div>
+   <div class="container game">
+      <div class="row">
+         <div class="col-11">
+            <div id="game"></div>
+         </div>
+         <div class="col-1 ddd">
+            <div class="dropDown buttons">
+               <ul class="menu ">
+                  <li>
+                     <a class="fas fa-cog" id="settings"></a>
+                     <ul id="dropMenu" style="height: 240px;">
+                        <li><a class='fas fa-expand-arrows-alt' id="btnFullscreen"></a></li>
+                        <li><a class='fas fa-music' id="musicBtn"></a></li>
+                        <li><a class='fas fa-volume-up' id="soundBtn"></a></li>
+                        <li><a class='fas fa-info-circle' id="infoBtn" data-toggle="modal" data-target="#infoModal"></a>
+                        </li>
+                     </ul>
+                  </li>
+               </ul>
+            </div>
+         </div>
       </div>
-      <div class="col-1 ddd">
-        <div class="dropDown buttons">
-          <ul class="menu ">
-            <li>
-              <a class="fas fa-cog" id="settings"></a>
-              <ul id="dropMenu" style="height: 240px;">
-                <li><a class='fas fa-expand-arrows-alt' id="btnFullscreen"></a></li>
-                <li><a class='fas fa-music' id="musicBtn"></a></li>
-                <li><a class='fas fa-volume-up' id="soundBtn"></a></li>
-                <li><a class='fas fa-info-circle' id="infoBtn" data-toggle="modal" data-target="#infoModal"></a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
+   </div>
 </main>
 
 <!-- INFO MODAL -->
 <div class="modal fade" id="infoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
      aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header no-border">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div class="row">
-          <div class="col-2 p-style">
-            <p>Username</p>
-          </div>
-          <div class="input-group mb-3 col-8">
-            <input type="text" class="form-control" placeholder="current username"
-                   aria-label="current username" aria-describedby="basic-addon2" id="disabled-input" disabled>
-            <div class="input-group-append" id='disable-btn'>
-              <button class="btn btn-outline-secondary" type="button">
-                <a class='fas fa-pencil-alt'></a>
-              </button>
+   <div class="modal-dialog" role="document">
+      <div class="modal-content">
+         <div class="modal-header no-border">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+               <span aria-hidden="true">&times;</span>
+            </button>
+         </div>
+         <div class="modal-body">
+            <div class="row">
+               <div class="col-2 p-style">
+                  <p>Username</p>
+               </div>
+               <div class="input-group mb-3 col-8">
+                  <input type="text" class="form-control" placeholder="current username"
+                         aria-label="current username" aria-describedby="basic-addon2" id="disabled-input" disabled>
+                  <div class="input-group-append" id='disable-btn'>
+                     <button class="btn btn-outline-secondary" type="button">
+                        <a class='fas fa-pencil-alt'></a>
+                     </button>
+                  </div>
+               </div>
+               <div class="col-2">
+                  <button class="btn btn-primary reg-btn" type="button">Save</button>
+               </div>
             </div>
-          </div>
-          <div class="col-2">
-            <button class="btn btn-primary reg-btn" type="button">Save</button>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-2 p-style">
-            <p>Place</p>
-          </div>
-          <div class="col-10 p-style">
-            <p><i>user place</i></p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-2 p-style">
-            <p>Score</p>
-          </div>
-          <div class="col-10 p-style">
-            <p><i>user score</i></p>
-          </div>
-        </div>
+            <div class="row">
+               <div class="col-2 p-style">
+                  <p>Place</p>
+               </div>
+               <div class="col-10 p-style">
+                  <p><i>user place</i></p>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-2 p-style">
+                  <p>Score</p>
+               </div>
+               <div class="col-10 p-style">
+                  <p><i>user score</i></p>
+               </div>
+            </div>
+         </div>
       </div>
-    </div>
-  </div>
+   </div>
 </div>
 
 <!-- AUDIO -->
 <audio id="track">
-  <source src="../audio/The Pink Panther.mp3" type="audio/mp3">
+   <source src="../audio/The Pink Panther.mp3" type="audio/mp3">
 </audio>
 
 <!--BOOTSTRAP SCRIPTS-->

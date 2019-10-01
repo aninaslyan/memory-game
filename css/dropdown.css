@@ -1,56 +1,57 @@
 /*MENU*/
 
 .ddd {
-    padding-left: 7px
+   padding-left: 7px
 }
+
 .menu {
-    margin: 0 auto;
-    position: relative;
-    list-style: none;
-    padding: 0;
+   margin: 0 auto;
+   position: relative;
+   list-style: none;
+   padding: 0;
 }
 
 .menu > li > a[id="settings"] {
-    font-size: 50px;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    color: rgba(250, 251, 255, 0.5);
-    display: block;
+   font-size: 50px;
+   margin-top: 10px;
+   margin-bottom: 20px;
+   color: rgba(250, 251, 255, 0.5);
+   display: block;
 }
 
 .menu ul {
-    width: 75px;
-    background: rgba(255, 255, 255, 0.09);
-    /*height: 180px;*/
-    opacity: 0;
-    position: absolute;
-    transition: all .8s ease;
-    top: 80px;
-    right: 10px;
+   width: 75px;
+   background: rgba(255, 255, 255, 0.09);
+   /*height: 180px;*/
+   opacity: 0;
+   position: absolute;
+   transition: all .8s ease;
+   top: 80px;
+   right: 10px;
 }
 
 .menu ul li {
-    list-style: none;
+   list-style: none;
 }
 
 .menu ul {
-    visibility: hidden;
+   visibility: hidden;
 }
 
 .menu li:hover ul {
-    visibility: visible;
-    opacity: 1;
-    transform: translateY(0);
+   visibility: visible;
+   opacity: 1;
+   transform: translateY(0);
 }
 
 .menu ul a {
-    display: block;
+   display: block;
 }
 
 .menu li ul {
-    padding: 0;
+   padding: 0;
 }
 
 #dropMenu li a {
-    right: 20px;
+   right: 20px;
 }

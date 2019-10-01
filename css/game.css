@@ -1,21 +1,21 @@
-#game{
-    padding-left: 50px;
+#game {
+   padding-left: 50px;
 }
 
-.card {    
-    background-image: url("../img/bg2.jpg");
-    min-width: 125.016px;
-    min-height: 120px;
-    float: left;
-    margin: 10px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-color: transparent;
-    border: none;
-    border-radius: 15px;
-    cursor: pointer;
+.card {
+   background-image: url("../img/bg2.jpg");
+   min-width: 125.016px;
+   min-height: 120px;
+   float: left;
+   margin: 10px;
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-color: transparent;
+   border: none;
+   border-radius: 15px;
+   cursor: pointer;
 }
 
 img {
-    width: 10px !important;
+   width: 10px !important;
 }
