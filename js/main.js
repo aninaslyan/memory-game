@@ -21,7 +21,7 @@ for (let i = 0; i < 23; i++) {
 $('#restartBtn').on('click', function () {
    clickSound();
    setTimeout(() => {
-      window.location.href = 'file:///home/reactive/Project/memory-game/pages/game.html'; //change after deployment
+      location.reload(); //change after deployment
    }, 1000)
 });
 
