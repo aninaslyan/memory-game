@@ -1,0 +1,129 @@
+/* MAIN */
+
+body {
+  background-color: #e0f6ea;
+  font-family: "comic sans ms", serif;
+}
+
+.content {
+  text-align: center;
+}
+
+.game {
+  padding-top: 20px;
+  min-height: 700px;
+  min-width: 800px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(#6fb98f, #2c7873);
+}
+
+/* CONTENT */
+
+/* Header */
+
+.container header h1 {
+  color: #004445;
+  font-weight: bolder;
+  font-size: 85px;
+  text-align: center;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  user-select: none;
+  cursor: pointer
+}
+
+/* Form */
+
+.label-text {
+  font-size: 30px;
+  color: white
+}
+
+.my-input {
+  margin: 0 auto;
+  max-width: 250px;
+  border-radius: 10px;
+  border: 3px solid #6fb98f;
+}
+
+.my-input:focus, .reg-input:focus {
+  border: 4px solid #205c4d63;
+  box-shadow: none;
+}
+
+.register {
+  margin-top: 20px;
+}
+
+.register-link {
+  font-size: 18px;
+  color: white !important;
+  text-decoration: underline;
+  transition: all 0.3s ease 0s;
+}
+
+.register-link:hover {
+  color: white !important;
+  letter-spacing: 1px;
+  transition: all 0.3s ease 0s;
+}
+
+.main-btn {
+  border: none;
+  background-color: #00494bd5;
+  color: #ffffff !important;
+  font-size: 22px;
+  font-weight: 700 !important;
+  border-radius: 6px;
+  display: inline-block;
+  transition: all 0.3s ease 0s;
+}
+
+.main-btn:hover {
+  background-color: #002d2e;
+  color: #ffffff !important;
+  letter-spacing: 1.5px;
+  transition: all 0.3s ease 0s;
+}
+
+/* Register  */
+
+.reg-btn, .btn-primary:not(:disabled):not(.disabled):active {
+  background-color: #00494bd5;
+  border: none
+}
+
+.reg-btn:hover {
+  background-color: #002d2e;
+}
+
+/* Loading */
+
+.txt .loading {
+  font-size: 48px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-align: center;
+}
+
+/* Icons */
+
+a[id = "btnFullscreen"] {
+  position: absolute;
+  color: rgba(250, 251, 255, 0.5) !important;
+  text-align: right;
+  font-size: 40px;
+}
+
+a[id = "btnFullscreen"]:hover {
+  color: rgb(255, 255, 255) !important;
+  cursor: pointer;
+}
+
+a[id = "btnFullscreen"] {
+  right: 30px;
+  top: 10px;
+}
