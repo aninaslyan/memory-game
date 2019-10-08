@@ -12,4 +12,6 @@ router.get('/', (ctx, next) => {
 app.use(logger());
 app.use(router.routes());
 app.use(router.allowedMethods());
-app.listen(3000);
+
+const server = app.listen(3000);
+export default server;
