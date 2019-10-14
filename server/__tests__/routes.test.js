@@ -1,5 +1,5 @@
 const request = require('supertest');
-import server from '../app.js';
+import server from '../server.js';
 
 beforeAll(async () => {
   // do something before anything else runs
