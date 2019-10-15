@@ -1,12 +1,10 @@
 import mongoose from 'mongoose';
+import bcrypt from 'bcryptjs';
 
 const Schema = mongoose.Schema;
 
 const userSchema = new Schema({
-  _id: {
-    type: mongoose.Types.ObjectId,
-    required: true
-  },
+  name: String,
   email: {
     type: String,
     required: true
@@ -18,17 +16,42 @@ const userSchema = new Schema({
   score: Number
 });
 
-class User {
-  constructor(id) {
+class UserMethods {
+  constructor() {
     this.model = mongoose.model('User', userSchema);
-    this.id = id;
   }
 
-  getUserScore() {
-    return this.model.find({ _id: this.id }, (err, data) => {
-      console.log(data, err);
+  getUserScore(id) {
+    return this.model.findOne({_id: id}, (err, data) => {
+      console.log(data.score);
     });
+  }
+
+  async userRegister(name, email, password) {
+    let user = await this.model.findOne({email});
+
+    if (user) {
+      // user exists
+      console.log('user exists');
+    } else {
+      const newUser = new this.model({
+        name,
+        email,
+        password,
+        score: 0
+      });
+
+      bcrypt.genSalt(10, (err, salt) => {
+        bcrypt.hash(newUser.password, salt, (err, hash) => {
+          if (err) throw err;
+          newUser.password = hash;
+          newUser
+            .save()
+            .catch(err => console.log(err));
+        });
+      });
+    }
   }
 }
 
-export default User;
+export default UserMethods;
