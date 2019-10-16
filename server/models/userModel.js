@@ -47,6 +47,7 @@ class UserMethods {
           newUser.password = hash;
           newUser
             .save()
+            .then(res => console.log(res))
             .catch(err => console.log(err));
         });
       });
