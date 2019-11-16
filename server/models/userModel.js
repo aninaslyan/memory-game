@@ -32,10 +32,10 @@ class UserMethods {
 
   async userRegister(name, email, password) {
     try {
-      let user = await this.model.findOne({email});
+      let user = await this.model.findOne({ email });
 
       if (user) {
-        console.log('user exists');
+        return 'user exists';
       } else {
         const newUser = new this.model({
           name,
