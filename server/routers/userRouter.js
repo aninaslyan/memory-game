@@ -9,7 +9,9 @@ router.get('/:id/score', async (ctx, next) => {
   ctx.response.body = score;
 });
 
-router.get('/scores', (ctx, next) => {
+router.put('/:id/update-score', async (ctx, next) => {
+  const userWithUpdatedScore = await userCtr.userUpdateScore(ctx.params.id, ctx.query.score);
+  ctx.response.body = userWithUpdatedScore;
 });
 
 router.get('/rating', async (ctx, next) => {

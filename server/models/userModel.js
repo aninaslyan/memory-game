@@ -30,6 +30,15 @@ class UserMethods {
     }
   }
 
+  async getUserWithUpdatedScore(id, score) {
+    try {
+      let user = await this.model.findOneAndUpdate({ _id: id }, { $set: { score: score }}, { new: true, useFindAndModify: false });
+      return user;
+    } catch(e) {
+      console.log(e);
+    }
+  }
+
   async getUsersByScores() {
     try {
       return await this.model.find().sort({'score': 'desc'});

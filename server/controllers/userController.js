@@ -6,8 +6,9 @@ export default {
     return await player.getUserScore(id);
   },
 
-  userScores() {
-
+  async userUpdateScore(id, score) {
+    let player = new UserMethods();
+    return await player.getUserWithUpdatedScore(id, score);
   },
 
   async usersByScores() {
