@@ -21,6 +21,8 @@ export default {
     return await player.userRegister(name, email, password);
   },
 
-  login() {
+  async login({ email, password }) {
+    let player = new UserMethods();
+    return await player.loginUser(email, password);
   }
 };

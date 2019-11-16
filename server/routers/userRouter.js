@@ -31,7 +31,9 @@ router.post('/register', async (ctx, next) => {
   }
 });
 
-router.post('/login', (ctx, next) => {
+router.post('/login', async (ctx, next) => {
+  const user = await userCtr.login(ctx.query);
+  ctx.response.body = user;
 });
 
 function validation({ name, email, password, password2 }) {
