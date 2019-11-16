@@ -7,6 +7,12 @@ export default {
   },
 
   userScores() {
+
+  },
+
+  async usersByScores() {
+    let player = new UserMethods();
+    return await player.getUsersByScores();
   },
 
   async register({ name, email, password }) {

@@ -12,6 +12,11 @@ router.get('/:id/score', async (ctx, next) => {
 router.get('/scores', (ctx, next) => {
 });
 
+router.get('/rating', async (ctx, next) => {
+  let sortedUsersByScore = await userCtr.usersByScores();
+  ctx.response.body = sortedUsersByScore;
+});
+
 router.post('/register', async (ctx, next) => {
   const errors = validation(ctx.query);
 

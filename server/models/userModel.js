@@ -30,6 +30,14 @@ class UserMethods {
     }
   }
 
+  async getUsersByScores() {
+    try {
+      return await this.model.find().sort({'score': 'desc'});
+    } catch(e) {
+      console.log(e);
+    }
+  }
+
   async userRegister(name, email, password) {
     try {
       let user = await this.model.findOne({ email });
