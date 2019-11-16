@@ -9,8 +9,8 @@ export default {
   userScores() {
   },
 
-  async register({name, email, password, password2}) {
-    // validation staff
+  async register({ name, email, password, password2 }) {
+    // validation staff todo move validation to router
     let errors = [];
 
     const emailValidator = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -26,7 +26,7 @@ export default {
 
     // password
     if (password.length < 6) {
-      errors.push({message: 'Password should be at least 6 characters'});
+      errors.push({message: 'Password should have at least 6 characters'});
     }
 
     if (password !== password2) {
@@ -35,7 +35,7 @@ export default {
 
     if (errors.length <= 0) {
       let player = new UserMethods();
-      return player.userRegister(name, email, password);
+      return await player.userRegister(name, email, password);
     } else {
       return errors;
     }

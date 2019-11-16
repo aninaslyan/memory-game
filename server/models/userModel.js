@@ -21,36 +21,40 @@ class UserMethods {
     this.model = mongoose.model('User', userSchema);
   }
 
-  getUserScore(id) {
-    return this.model.findOne({_id: id}, (err, data) => {
-      console.log(data.score);
-    });
+  async getUserScore(id) {
+    try {
+      let data = await this.model.findOne({ _id: id });
+      return data.score;
+    } catch (err) {
+      console.log(err);
+    }
   }
 
   async userRegister(name, email, password) {
-    let user = await this.model.findOne({email});
+    try {
+      let user = await this.model.findOne({email});
 
-    if (user) {
-      // user exists
-      console.log('user exists');
-    } else {
-      const newUser = new this.model({
-        name,
-        email,
-        password,
-        score: 0
-      });
-
-      bcrypt.genSalt(10, (err, salt) => {
-        bcrypt.hash(newUser.password, salt, (err, hash) => {
-          if (err) throw err;
-          newUser.password = hash;
-          newUser
-            .save()
-            .then(res => console.log(res))
-            .catch(err => console.log(err));
+      if (user) {
+        console.log('user exists');
+      } else {
+        const newUser = new this.model({
+          name,
+          email,
+          password,
+          score: 0
         });
-      });
+
+        try {
+          let salt = await bcrypt.genSalt(10);
+          newUser.password = await bcrypt.hash(newUser.password, salt);
+
+          return await newUser.save();
+        } catch (err) {
+          console.log(err);
+        }
+      }
+    } catch (err) {
+      console.log(err);
     }
   }
 }

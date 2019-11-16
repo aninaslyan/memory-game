@@ -1,22 +1,22 @@
 import Router from 'koa-router';
 import userCtr from '../controllers/userController';
 
-const router = new Router({prefix: '/users'});
+const router = new Router({ prefix: '/users' });
 
 router.get('/:id/score', async (ctx, next) => {
-  let data = await userCtr.userScore(ctx.params.id);
-  ctx.response.body = data;
+  let score = await userCtr.userScore(ctx.params.id);
+  ctx.response.body = score;
 });
 
-router.get('/scores', async (ctx, next) => {
+router.get('/scores', (ctx, next) => {
 });
 
 router.post('/register', async (ctx, next) => {
-  let data = await userCtr.register(ctx.query);
-  ctx.response.body = data;
+  const user = await userCtr.register(ctx.query);
+  ctx.response.body = user;
 });
 
-router.post('/login', async (ctx, next) => {
+router.post('/login', (ctx, next) => {
 });
 
 export default router;
